@@ -1,0 +1,19 @@
+@startuml Use_Cases
+actor Student
+actor Coordinator
+actor Accommodation
+actor Finance
+actor Admin
+
+Student --> (Register)
+Student --> (Login)
+Student --> (Apply for Internship)
+Student --> (View Room Allocation)
+Student --> (Submit Maintenance Request)
+
+Coordinator --> (Approve Internship)
+Accommodation --> (Allocate Room)
+Finance --> (Verify Payment)
+Admin --> (Manage Users)
+
+@enduml

@@ -1,0 +1,12 @@
+@startuml Activity_Diagram
+start
+:Student logs in;
+if (Apply internship?) then (yes)
+  :Fill application;
+  :Submit;
+  -> Coordinator: Review
+else (no)
+  stop
+endif
+stop
+@enduml

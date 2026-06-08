@@ -1,0 +1,18 @@
+@startuml Class_Diagram
+class User {
+  - id
+  - username
+  - role
+}
+class Student {
+  - student_number
+}
+class Internship
+class Room
+class MaintenanceRequest
+class Payment
+User "1" -- "0..1" Student
+Student "1" -- "*" Internship
+Student "1" -- "*" MaintenanceRequest
+Student "1" -- "*" Payment
+@enduml

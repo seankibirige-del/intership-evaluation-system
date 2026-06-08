@@ -1,0 +1,42 @@
+@startuml ER_Diagram
+entity User {
+  * id
+  username
+  email
+  role
+}
+entity Student {
+  * id
+  student_number
+  phone
+  faculty
+  course
+  year_of_study
+}
+entity Internship {
+  * id
+  company_name
+  status
+}
+entity Room {
+  * id
+  room_number
+  capacity
+  occupancy
+}
+entity MaintenanceRequest {
+  * id
+  title
+  status
+}
+entity Payment {
+  * id
+  amount
+  reference
+}
+User ||--o{ Student
+Student ||--o{ Internship
+Student ||--o{ MaintenanceRequest
+Student ||--o{ Payment
+Room ||--o{ Student : allocated_to
+@enduml
